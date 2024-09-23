@@ -1,0 +1,243 @@
+/* Full page background with gradient */
+body {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container for login */
+.login-container {
+  background-color: #ffffff;
+  width: 900px;
+  height: 500px;
+  padding: 0;
+  display: flex;
+  border-radius: 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Left half for the login form */
+.login-left {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* Heading style for login form */
+.login-left h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #6d6d6d;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 70px;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the input fields with icons and minimalist lines */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+/* Styling for the vertical blue line next to the label */
+.input-container::before {
+  content: '';
+  width: 2px;
+  height: 20px; /* Make the blue line shorter */
+  background-color: #007bff;
+  position: absolute;
+  margin-left: 5px; 
+  top: 18px;
+}
+
+/* Icon styling (aligned to the right side) */
+.input-container i {
+  color: #aaa; /* Icon color (lighter grey) */
+  margin-left: auto;
+  padding-right: 10px;
+  font-size: 16px; /* Reduce the icon size */
+}
+
+/* Label styling for input fields */
+.label {
+  font-size: 12px;
+  color: #6d6d6d;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  font-weight: 600;
+}
+
+/* Input field with icon and label */
+.input-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: transparent;
+  padding-left: 15px; /* Spacing from the blue line */
+  transition: border-color 0.3s ease;
+}
+
+/* Styling for input fields */
+.login-left input[type="email"],
+.login-left input[type="password"] {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-left input[type="email"]:focus,
+.login-left input[type="password"]:focus {
+  border-bottom-color: #007bff;
+}
+
+/* Button design */
+.login-left button {
+  width: 100%;
+  padding: 15px;
+  background-color: #9f44d3;
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-left button:hover {
+  background-color: #5b32b4;
+  box-shadow: 0 4px 20px rgba(91, 50, 180, 0.3);
+}
+
+/* Text link styling */
+
+.login-left p {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #6d6d6d;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-left p a {
+  color: #5881c2; 
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-left p a:hover {
+  color: #6e98c5;
+  text-decoration: underline;
+}
+
+
+/* Right half for the image */
+.login-right {
+  flex: 1;
+  background: url('https://img.freepik.com/free-photo/front-view-office-desk-with-laptop-chair_23-2148821873.jpg?t=st=1726675085~exp=1726678685~hmac=9d21f19f61a392fffbae5b788d920152e78eefe6f7d2e49fa6167b43b35fff80&w=740') no-repeat center center;
+  background-size: cover;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-right {
+    height: 200px;
+  }
+
+  .login-left {
+    padding: 20px;
+  }
+}
+/* Container for the input fields with icons and minimalist lines */
+.input-container {
+  position: relative; /* Required for icon placement */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+/* Icon styling (aligned inside the input, on the right side) */
+.input-container i {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  transform: translateY(-50%);
+  color: #aaa; /* Icon color */
+  font-size: 16px; /* Adjust icon size */
+  pointer-events: none; /* Make icon not clickable */
+}
+
+/* Input field with icon and label */
+.input-container input {
+  width: 100%;
+  padding: 15px;
+  padding-right: 40px; /* Space for the icon */
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+/* Button design with blue color, rounded and shadow */
+.login-left button {
+  position: relative;
+  margin-left: 135px;
+  width: 35%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px; 
+  background-color: #6e98c5; 
+  color: white;
+  border: none;
+  border-radius: 50px; 
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover effect for the button */
+.login-left button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 8px 30px rgba(0, 86, 179, 0.5); /* Stronger shadow on hover */
+}
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+

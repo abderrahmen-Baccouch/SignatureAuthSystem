@@ -1,0 +1,672 @@
+/* Full page background with gradient */
+body {
+  background: linear-gradient(135deg, #ffffff, #f5f8fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container for register */
+.register-container {
+  background-color: #ffffff;
+  width: 800px;
+  height: 500px;
+  padding: 0;
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Left half with light blue background, margin, and image */
+.register-left {
+  flex: 1;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Style for the image */
+.register-left img {
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* Right half for the register form */
+.register-right {
+  position: relative;
+  flex: 1;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  transform: translateY(-25px); 
+}
+
+/* Heading style for register form */
+.register-right h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000000;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+/* Description styling */
+.register-right p {
+  font-family: 'Poppins';
+  font-size: 12px;
+  color: #c2c2c2;
+  margin-left: 15px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+/* Style for the input group */
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Label styling */
+.input-group label {
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Input field styling (applied to all inputs) */
+.input-group input {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 30%; /* Make all inputs smaller */
+  max-width: 300px; /* Limit maximum width */
+}
+
+/* Focus styling */
+.input-group input:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling */
+.input-group input::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect */
+.input-group input:hover {
+  border-color: #ece0ff;
+}
+
+/* Button styling */
+.register-right button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.register-right button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 30px rgba(0, 86, 179, 0.5);
+}
+
+/* Cloud image styling */
+.cloudImg {
+  position: absolute;
+  top: -20px;
+  right: 90;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .register-left {
+    height: 150px;
+    margin-bottom: 60px;
+    border-radius: 0;
+  }
+
+  .register-right {
+    padding: 20px;
+  }
+}
+
+
+/* Style for the "Username" input */
+.input-group #name {
+  position: relative;
+  top: -5px; 
+  right: -20px; 
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 30%; 
+  max-width: 300px;
+}
+
+/* Focus styling for "Username" input */
+#name:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Username" input */
+#name::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Username" input */
+#name:hover {
+  border-color: #ece0ff;
+}
+
+/* Style for the "Username" label */
+.input-group label[for="name"] {
+  position: relative;
+  top: 0px;  /* Keep it in place vertically */
+  right: -20px;  /* Moves the label slightly to the right with the input */
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Style for the "Service" input */
+#service {
+  position: relative;
+  top: -90.5px; /* Moves it upwards */
+  right: -180px; /* Moves it to the right */
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 30%; /* Make the input smaller */
+  max-width: 300px;
+}
+
+/* Focus styling for "Service" input */
+#service:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Service" input */
+#service::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Service" input */
+#service:hover {
+  border-color: #ece0ff;
+}
+/* Style for the "Service" label */
+label[for="service"] {
+  position: relative;
+  top: -85px;  /* Moves it upwards with the input */
+  right: -180px;  /* Moves it to the right with the input */
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;  /* Light font weight */
+  letter-spacing: 0.5px;  /* Adds slight letter spacing */
+}
+/* Style for the "Email" input */
+.input-group #email {
+  position: relative;
+  top: -105px; /* Moves it upwards */
+  right: -20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 75%; 
+  max-width: 500px;
+}
+
+/* Focus styling for "Email" input */
+#email:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Email" input */
+#email::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Email" input */
+#email:hover {
+  border-color: #ece0ff;
+}
+
+/* Style for the "Email" label */
+.input-group label[for="email"] {
+  position: relative;
+  top: -100px;  /* Moves it upwards with the input */
+  right: -20px;
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Style for the "Password" input */
+#password {
+  position: relative;
+  top: -115px; /* Moves it upwards */
+  right: -20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 75%;  
+  max-width: 500px;
+}
+
+/* Focus styling for "Password" input */
+#password:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Password" input */
+#password::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Password" input */
+#password:hover {
+  border-color: #ece0ff;
+}
+
+/* Style for the "Password" label */
+label[for="password"] {
+  position: relative;
+  top: -110px;  /* Moves it upwards with the input */
+  right: -20px;
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+/* Style for the "Phone" input */
+#numtel {
+  position: relative;
+  top: -125px; /* Moves it upwards */
+  right: -20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 30%;  
+  max-width: 500px;
+}
+
+/* Focus styling for "Phone" input */
+#numtel:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Phone" input */
+#numtel::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Phone" input */
+#numtel:hover {
+  border-color: #ece0ff;
+}
+
+/* Style for the "Phone" label */
+label[for="numtel"] {
+  position: relative;
+  top: -120px;  /* Moves it upwards with the input */
+  right: -20px;
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Style for the "Address" input */
+.input-group #address {
+  position: relative;
+  top: -211px; /* Moves it upwards */
+  right: -180px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+  background-color: #ffffff;
+  width: 30%;  
+  max-width: 500px;
+}
+
+/* Focus styling for "Address" input */
+#address:focus {
+  border-color: #8daff3;
+}
+
+/* Placeholder styling for "Address" input */
+#address::placeholder {
+  color: #999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect for "Address" input */
+#address:hover {
+  border-color: #ece0ff;
+}
+
+/* Style for the "Address" label */
+.input-group label[for="address"] {
+  position: relative;
+  top: -205px;  /* Moves it upwards with the input */
+  right: -180px;
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+.register-right button {
+  position: absolute;
+  margin-left: 22px;
+  bottom: 10px;
+  transform: translateY(-20px); /* Slightly move the button upwards */
+  width: 35%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  background-color: #d9385ea3; /* Same semi-transparent background */
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(217, 56, 94, 0.15); /* Lighter shadow */
+  z-index: 999;
+}
+
+
+/* Hover effect for the button */
+.register-right button:hover {
+  background-color: #a12d47; /* Slightly darker background on hover */
+  box-shadow: 0 4px 12px rgba(161, 45, 71, 0.3); /* Lighter shadow effect on hover */
+}
+.register-container {
+  position: relative;
+}
+
+.register-container::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  bottom: 5%;
+  left: 52.5%;
+  width: 1px;
+  background-color: #ddd;
+  height: 57%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Styling for the "Already have an account? Login now" text */
+.login-text {
+  position: absolute;
+  bottom: -5px;
+  right: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #666; 
+  width: 100%;
+  
+}
+
+.login-text a {
+  color: #d9385e; 
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-text a:hover {
+  color: #a12d47; 
+}
+.register-container {
+  animation: fadeSlideIn 0.5s ease-in-out forwards;
+}
+
+/* Keyframes for a smooth fade and slide-in effect */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Keyframes for a smooth fade and slide-in effect */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for scaling up the button (hover bounce effect) */
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Apply the fadeSlideIn animation with a staggered delay for elements */
+.register-right h2,
+.register-right p,
+.register-right .input-group,
+.register-right button {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideIn 0.6s ease-in-out forwards;
+}
+
+/* Add staggered delays for smoother appearance */
+.register-right h2 {
+  animation-delay: 0.2s;
+}
+.register-right p {
+  animation-delay: 0.3s;
+}
+.register-right .input-group {
+  animation-delay: 0.4s;
+}
+.register-right button {
+  animation-delay: 0.6s;
+}
+
+/* Hover effect for the button */
+.register-right button:hover {
+  transform: scale(1.05); /* Add the bounce effect directly using transform */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the scale effect */
+}
+
+/* Additional styles for button */
+.register-right button {
+  position: absolute;
+  bottom: 27px;
+  left: 9.5%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  background-color: #d9385ea3;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(217, 56, 94, 0.15);
+  z-index: 999;
+}
+
+/* Hover effect for button background */
+.register-right button:hover {
+  background-color: #a12d47;
+  box-shadow: 0 4px 12px rgba(161, 45, 71, 0.3);
+}
+/* Fade-out effect */
+.fade-out {
+  animation: fadeOut 0.5s forwards; /* Add forwards to maintain opacity: 0 after animation */
+}
+
+/* Keyframes for fading out */
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+/* Slide-out to the left with fade-out effect */
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.7s ease-in-out forwards; 
+}
+
+
